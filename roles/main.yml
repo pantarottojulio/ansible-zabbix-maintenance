@@ -1,0 +1,11 @@
+---
+- name: maintenance 
+  zabbix_maintenance:
+    name: teste
+    host_name: "{{ list }}"
+    state: present
+    minutes: 30
+    server_url: https://zabbix.buy4.io/
+    login_user: "{{ vault_zabbix_user }}"
+    login_password: "{{ vault_zabbix_password }}"
+    validate_certs: no

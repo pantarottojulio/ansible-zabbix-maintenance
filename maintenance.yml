@@ -1,0 +1,8 @@
+---
+- name: Create_maintenance_period
+  hosts: localhost
+  tasks:
+    - import_tasks: ./roles/main.yml
+  vars_files:
+    - ./vars/personal_credentials.yml
+    - ./vars/machine_list.yml 
